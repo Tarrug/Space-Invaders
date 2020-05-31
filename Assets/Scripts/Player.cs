@@ -26,8 +26,8 @@ public class Player : MonoBehaviour
         transform.Translate(Vector3.right * horizontalInput * _speed * Time.deltaTime);  
         transform.Translate(Vector3.up * verticalInput * _speed * Time.deltaTime);  
             //(vertical axis movement restrictions)
-        transform.position = new Vector3(transform.position.x,Mathf.Clamp(transform.position.y,3.8f,0),0);
-            //(horizontal axis movement resrictions)
+        transform.position = new Vector3(transform.position.x,Mathf.Clamp(transform.position.y,-3.8f,0),0);
+            //(horizontal axis movement restrictions)
         if (transform.position.x > 11.3f)
         {
             transform.position = new Vector3(-11.3f,transform.position.y,0);
